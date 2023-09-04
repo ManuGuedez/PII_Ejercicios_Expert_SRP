@@ -5,7 +5,13 @@ namespace Library
 {
     public class AppointmentService
     {
-        public static string CreateAppointment(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
+        /*
+            La clase AppointmentService de esta forma posee la responsabilidad de validar que los datos pasados como parámetros del método
+        CreateAppointment sean correctos. La misma debe ser modificada con el fin de que úniacamente se encargue de coordinar la consulta,
+        es decir, únicamente debería encargarse de crear la consulta.
+        */
+
+        public static string CreateAppointment1(string name, string id, string phoneNumber, DateTime date, string appoinmentPlace, string doctorName)
         {
             StringBuilder stringBuilder = new StringBuilder("Scheduling appointment...\n");
             Boolean isValid = true;
